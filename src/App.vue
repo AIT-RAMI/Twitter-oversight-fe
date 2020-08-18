@@ -2,89 +2,79 @@
   <div class="flexible-content">
     <!--Navbar-->
     <mdb-navbar class="flexible-navbar white" light position="top" scrolling>
-      <mdb-navbar-brand href="https://mdbootstrap.com/docs/vue/" target="_blank"
-        >Twitter Oversight</mdb-navbar-brand
-      >
+      <mdb-navbar-brand href="https://mdbootstrap.com/docs/vue/" target="_blank">Twitter Oversight</mdb-navbar-brand>
       <mdb-navbar-toggler>
         <mdb-navbar-nav left>
-          
-          <mdb-nav-item to="/dashboard" waves-fixed 
-            ><mdb-icon
-              icon="chart-pie"
-              class="mr-3"
-            />Dashboard</mdb-nav-item>
-          
-          
-          <mdb-nav-item
-            href="/profile"
-            waves-fixed
-            ><mdb-icon icon="table" class="mr-3" />Preferences</mdb-nav-item
-          >
-          
-          <mdb-nav-item
-            href="/404"
-            waves-fixed
-          
-            ><mdb-icon icon="map" class="mr-3" />About Us</mdb-nav-item
-          >
-        
+          <mdb-nav-item to="/dashboard" waves-fixed>
+            <mdb-icon icon="chart-pie" class="mr-3" />Dashboard
+          </mdb-nav-item>
+
+          <mdb-nav-item href="/profile" waves-fixed>
+            <mdb-icon icon="table" class="mr-3" />Preferences
+          </mdb-nav-item>
+
+          <mdb-nav-item href="/404" waves-fixed>
+            <mdb-icon icon="map" class="mr-3" />About Us
+          </mdb-nav-item>
         </mdb-navbar-nav>
 
         <mdb-navbar-nav right>
-          <mdb-nav-item href="#!" waves-fixed
-            ><mdb-icon fab class="text-black" icon="facebook-square"
-          /></mdb-nav-item>
-          <mdb-nav-item href="#!" waves-fixed
-            ><mdb-icon fab icon="twitter"
-          /></mdb-nav-item>
-          <mdb-nav-item href="https://github.com/AIT-RAMI/Twitter-oversight" waves-fixed
-            ><mdb-icon fab class="text-black" icon="github"
-          /></mdb-nav-item>
+          <mdb-nav-item href="#!" waves-fixed>
+            <mdb-icon fab class="text-black" icon="facebook-square" />
+          </mdb-nav-item>
+          <mdb-nav-item href="#!" waves-fixed>
+            <mdb-icon fab icon="twitter" />
+          </mdb-nav-item>
+          <mdb-nav-item href="https://github.com/AIT-RAMI/Twitter-oversight" waves-fixed>
+            <mdb-icon fab class="text-black" icon="github" />
+          </mdb-nav-item>
         </mdb-navbar-nav>
       </mdb-navbar-toggler>
     </mdb-navbar>
     <!--/.Navbar-->
     <!-- Sidebar -->
     <div class="sidebar-fixed position-fixed">
-      <a class="logo-wrapper"
-        ><img alt="" class="img-fluid" src="./assets/logo-to.png"
-      /></a>
+      <a class="logo-wrapper">
+        <img alt class="img-fluid" src="./assets/logo-to.png" />
+      </a>
       <mdb-list-group class="list-group-flush">
         <router-link to="/404" @click.native="activeItem = 1">
-          <mdb-list-group-item
-            :action="true"
-            :class="activeItem === 1 && 'active'"
-            >Covid-19</mdb-list-group-item
-          >
+          <mdb-list-group-item :action="true" :class="activeItem === 1 && 'active'">Covid-19</mdb-list-group-item>
         </router-link>
         <router-link to="/404" @click.native="activeItem = 2">
-          <mdb-list-group-item
-            :action="true"
-            :class="activeItem === 2 && 'active'"
-            >ENSIAS</mdb-list-group-item
-          >
+          <mdb-list-group-item :action="true" :class="activeItem === 2 && 'active'">ENSIAS</mdb-list-group-item>
         </router-link>
         <router-link to="/404" @click.native="activeItem = 3">
-          <mdb-list-group-item
-            :action="true"
-            :class="activeItem === 3 && 'active'"
-            >Football</mdb-list-group-item
-          >
+          <mdb-list-group-item :action="true" :class="activeItem === 3 && 'active'">Football</mdb-list-group-item>
         </router-link>
-        <mdb-btn color="primary" size="sm" @click.native="showAddTopic = true">Add Topic</mdb-btn>
+        <mdb-btn color="primary" size="lg" @click.native="showAddTopic = true">Add Topic</mdb-btn>
         <mdb-modal size="lg" :show="showAddTopic" @close="showAddTopic = false">
           <mdb-modal-header>
-            <mdb-modal-title>Modal title</mdb-modal-title>
+            <mdb-modal-title>Add new topic</mdb-modal-title>
           </mdb-modal-header>
-          <mdb-modal-body>...</mdb-modal-body>
+          <mdb-modal-body>
+            <div class="form-group1 inline-block">
+              <label for="Textarea1">Keywords</label>
+              <textarea class="form-control d-flex p-2" id="Textarea1" rows="3"></textarea>
+            </div>
+            <br />
+            <div class="form-group1">
+              <label for="Textarea2">Hashtags</label>
+              <textarea class="form-control rounded-0" id="Textarea2" rows="3"></textarea>
+            </div>
+            <br />
+            <br />
+            <div class="form-group1">
+              <label for="Textarea3">Countries</label>
+              <textarea class="form-control rounded-0" id="Textarea3" rows="3"></textarea>
+            </div>
+          </mdb-modal-body>
           <mdb-modal-footer>
             <mdb-btn color="secondary" @click.native="showAddTopic = false">Close</mdb-btn>
             <mdb-btn color="primary">Save changes</mdb-btn>
           </mdb-modal-footer>
         </mdb-modal>
-  
       </mdb-list-group>
-
     </div>
     <!-- /Sidebar  -->
     <main>
@@ -92,21 +82,38 @@
         <router-view></router-view>
       </div>
       <ftr color="primary-color-dark" class="text-center font-small darken-2">
-        
         <hr class="my4" />
         <div class="pb-4">
-          <a href="#"><mdb-icon fab icon="facebook-square" class="mr-3"/></a>
-          <a href="#"><mdb-icon fab icon="twitter" class="mr-3"/></a>
-          <a href="#"><mdb-icon fab icon="youtube" class="mr-3"/></a>
-          <a href="#"><mdb-icon fab icon="google-plus" class="mr-3"/></a>
-          <a href="#"><mdb-icon fab icon="dribbble" class="mr-3"/></a>
-          <a href="#"><mdb-icon fab icon="pinterest" class="mr-3"/></a>
-          <a href="#"><mdb-icon fab icon="github" class="mr-3"/></a>
-          <a href="#"><mdb-icon fab icon="codepen" class="mr-3"/></a>
+          <a href="#">
+            <mdb-icon fab icon="facebook-square" class="mr-3" />
+          </a>
+          <a href="#">
+            <mdb-icon fab icon="twitter" class="mr-3" />
+          </a>
+          <a href="#">
+            <mdb-icon fab icon="youtube" class="mr-3" />
+          </a>
+          <a href="#">
+            <mdb-icon fab icon="google-plus" class="mr-3" />
+          </a>
+          <a href="#">
+            <mdb-icon fab icon="dribbble" class="mr-3" />
+          </a>
+          <a href="#">
+            <mdb-icon fab icon="pinterest" class="mr-3" />
+          </a>
+          <a href="#">
+            <mdb-icon fab icon="github" class="mr-3" />
+          </a>
+          <a href="#">
+            <mdb-icon fab icon="codepen" class="mr-3" />
+          </a>
         </div>
         <p class="footer-copyright mb-0 py-3 text-center">
           &copy; {{ new Date().getFullYear() }} Copyright:
-          <a href="https://mdbootstrap.com/docs/vue/"> MDBootstrap.com </a>
+          <a
+            href="https://mdbootstrap.com/docs/vue/"
+          >MDBootstrap.com</a>
         </p>
       </ftr>
     </main>
@@ -130,7 +137,7 @@ import {
   mdbModalHeader,
   mdbModalTitle,
   mdbModalBody,
-  mdbModalFooter
+  mdbModalFooter,
 } from "mdbvue";
 
 export default {
@@ -146,22 +153,22 @@ export default {
     mdbListGroupItem,
     mdbIcon,
     mdbModal,
-  mdbModalHeader,
-  mdbModalTitle,
-  mdbModalBody,
-  mdbModalFooter,
-    ftr: mdbFooter
+    mdbModalHeader,
+    mdbModalTitle,
+    mdbModalBody,
+    mdbModalFooter,
+    ftr: mdbFooter,
   },
   data() {
     return {
       activeItem: 1,
-      showAddTopic: false
+      showAddTopic: false,
     };
   },
   beforeMount() {
     this.activeItem = this.$route.matched[0].props.default.page;
   },
-  mixins: [waves]
+  mixins: [waves],
 };
 </script>
 
