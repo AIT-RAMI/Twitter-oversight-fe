@@ -22,7 +22,7 @@ export default new Router({
     {
       path: '/preferences',
       name: 'Preferences',
-      props: { page: 2 },
+      props: { page: 1 },
       component: Preferences
       
     },

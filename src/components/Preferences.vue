@@ -34,9 +34,7 @@ export default {
   name: "Preferences",
   data: function() {
     return {
-      menu: 2,
-      hashtag: null,
-      id: null
+
     };
   },
   components: {
