@@ -95,30 +95,16 @@
           <a href="#">
             <mdb-icon fab icon="twitter" class="mr-3" />
           </a>
-          <a href="#">
-            <mdb-icon fab icon="youtube" class="mr-3" />
-          </a>
-          <a href="#">
-            <mdb-icon fab icon="google-plus" class="mr-3" />
-          </a>
-          <a href="#">
-            <mdb-icon fab icon="dribbble" class="mr-3" />
-          </a>
-          <a href="#">
-            <mdb-icon fab icon="pinterest" class="mr-3" />
-          </a>
-          <a href="#">
+          <a href="https://github.com/AIT-RAMI/Twitter-oversight">
             <mdb-icon fab icon="github" class="mr-3" />
           </a>
-          <a href="#">
-            <mdb-icon fab icon="codepen" class="mr-3" />
-          </a>
+          
         </div>
         <p class="footer-copyright mb-0 py-3 text-center">
           &copy; {{ new Date().getFullYear() }} Copyright:
           <a
-            href="https://mdbootstrap.com/docs/vue/"
-          >MDBootstrap.com</a>
+            href="http://ensias.um5.ac.ma/"
+          >ENSIAS</a>
         </p>
       </ftr>
     </main>
