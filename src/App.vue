@@ -9,22 +9,16 @@
             <mdb-icon icon="chart-pie" class="mr-3" />Dashboard
           </mdb-nav-item>
 
-          <mdb-nav-item href="profile" waves-fixed>
+          <mdb-nav-item href="preferences" waves-fixed>
             <mdb-icon icon="table" class="mr-3" />Preferences
           </mdb-nav-item>
 
-          <mdb-nav-item href="/404" waves-fixed>
+          <mdb-nav-item href="about" waves-fixed>
             <mdb-icon icon="map" class="mr-3" />About Us
           </mdb-nav-item>
         </mdb-navbar-nav>
 
         <mdb-navbar-nav right>
-          <mdb-nav-item href="#!" waves-fixed>
-            <mdb-icon fab class="text-black" icon="facebook-square" />
-          </mdb-nav-item>
-          <mdb-nav-item href="#!" waves-fixed>
-            <mdb-icon fab icon="twitter" />
-          </mdb-nav-item>
           <mdb-nav-item href="https://github.com/AIT-RAMI/Twitter-oversight" waves-fixed>
             <mdb-icon fab class="text-black" icon="github" />
           </mdb-nav-item>
@@ -38,14 +32,14 @@
         <img alt class="img-fluid" src="./assets/logo-to.png" />
       </a>
       <mdb-list-group class="list-group-flush">
-        <router-link to="/404" @click.native="activeItem = 1">
+        <router-link to="/" @click.native="activeItem = 1">
           <mdb-list-group-item :action="true" :class="activeItem === 1 && 'active'">Covid-19</mdb-list-group-item>
         </router-link>
         <router-link to="/" @click.native="activeItem = 2">
-          <mdb-list-group-item :action="true" :class="activeItem === 2 && 'active'">ENSIAS</mdb-list-group-item>
+          <mdb-list-group-item :action="true" :class="activeItem === 2 && 'active'">Marocains du monde</mdb-list-group-item>
         </router-link>
-        <router-link to="/404" @click.native="activeItem = 3">
-          <mdb-list-group-item :action="true" :class="activeItem === 3 && 'active'">Football</mdb-list-group-item>
+        <router-link to="/" @click.native="activeItem = 3">
+          <mdb-list-group-item :action="true" :class="activeItem === 3 && 'active'">Maroc &amp; Jeunesse</mdb-list-group-item>
         </router-link>
         <mdb-btn color="primary" size="lg" @click.native="showAddTopic = true">Add Topic</mdb-btn>
         <mdb-modal size="lg" :show="showAddTopic" @close="showAddTopic = false">
@@ -89,12 +83,6 @@
       <ftr color="primary-color-dark" class="text-center font-small darken-2">
         <hr class="my4" />
         <div class="pb-4">
-          <a href="#">
-            <mdb-icon fab icon="facebook-square" class="mr-3" />
-          </a>
-          <a href="#">
-            <mdb-icon fab icon="twitter" class="mr-3" />
-          </a>
           <a href="https://github.com/AIT-RAMI/Twitter-oversight">
             <mdb-icon fab icon="github" class="mr-3" />
           </a>

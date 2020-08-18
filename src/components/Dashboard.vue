@@ -233,8 +233,8 @@
                               <tr>
                                   <th scope="row">skislove27</th>
                                   <td># كورونا: Wenn infizierte Fälle zunehmen, ist ein teilweises und umfassendes Verbot unvermeidlich, und wir sind alle zuversichtlich, dass die Regierung Maßnahmen ergreift ... !! Diener der Menschheit</td>
-                                  <td>369</td>
-                                  <td>630</td>
+                                  <td>310</td>
+                                  <td>620</td>
                               </tr>
                           </tbody>    
                       </mdb-tbl>
