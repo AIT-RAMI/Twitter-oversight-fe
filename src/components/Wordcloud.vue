@@ -1,10 +1,14 @@
 <template>
-  <div id="app">
+  <div class="wordcloud">
       <wordcloud
       :data="defaultWords"
       nameKey="name"
       valueKey="value"
-      color="Accent">
+      :color="myColors"
+      :fontSize=[10,50]
+      :showTooltip="false"
+      :rotation=(0,20,1)
+      :wordClick="wordClickHandler">
       </wordcloud>
   </div>
 </template>
@@ -105,3 +109,8 @@ export default {
   }
 }
 </script>
+<style>
+.wordcloud {
+  height:.1em;
+}
+</style>

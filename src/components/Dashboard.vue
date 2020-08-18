@@ -135,7 +135,7 @@
           <mdb-card-header>Sentiment Classification</mdb-card-header>
           <mdb-card-body>
             <div style="display: block">
-              <mdb-doughnut-chart :data="doughnutChartData" :options="doughnutChartOptions" :height="300"/>
+              <mdb-doughnut-chart :data="doughnutChartData" :options="doughnutChartOptions" :height="350"/>
             </div>
           </mdb-card-body>
         </mdb-card>
@@ -144,7 +144,9 @@
         <mdb-card class="mb-4">
           <mdb-card-header>Word Cloud</mdb-card-header>
           <mdb-card-body>
-            <wordcloud/>
+            <div class="wordcloud">
+              <wordcloud/>
+            </div>
           </mdb-card-body>
         </mdb-card>
       </mdb-col>
@@ -820,4 +822,9 @@ export default {
 .classic-admin-card .card-body h4 {
   margin-top: 10px;
 }
+.wordcloud {
+  height: 350px;
+  display: block;
+}
+
 </style>
