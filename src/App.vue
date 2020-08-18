@@ -3,7 +3,7 @@
     <!--Navbar-->
     <mdb-navbar class="flexible-navbar white" light position="top" scrolling>
       <mdb-navbar-brand href="https://mdbootstrap.com/docs/vue/" target="_blank"
-        >MDB</mdb-navbar-brand
+        >Twitter Oversight</mdb-navbar-brand
       >
       <mdb-navbar-toggler>
         <mdb-navbar-nav left>
@@ -54,7 +54,7 @@
     <!-- Sidebar -->
     <div class="sidebar-fixed position-fixed">
       <a class="logo-wrapper"
-        ><img alt="" class="img-fluid" src="./assets/logo-mdb-vue-small.png"
+        ><img alt="" class="img-fluid" src="./assets/logo-to.png"
       /></a>
       <mdb-list-group class="list-group-flush">
         <router-link to="/dashboard" @click.native="activeItem = 1">
@@ -221,7 +221,7 @@ main {
 
 .sidebar-fixed .logo-wrapper img {
   width: 100%;
-  padding: 2.5rem;
+  padding: 1.1rem;
 }
 
 .sidebar-fixed .list-group-item {
