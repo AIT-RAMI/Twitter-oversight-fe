@@ -71,15 +71,20 @@
             >Football</mdb-list-group-item
           >
         </router-link>
-        <router-link to="/404" @click.native="activeItem = 4">
-          <mdb-list-group-item
-            :action="true"
-            :class="activeItem === 4 && 'active'"
-            >Add Topic</mdb-list-group-item
-          >
-        </router-link>
-        
+        <mdb-btn color="primary" size="sm" @click.native="showAddTopic = true">Add Topic</mdb-btn>
+        <mdb-modal size="lg" :show="showAddTopic" @close="showAddTopic = false">
+          <mdb-modal-header>
+            <mdb-modal-title>Modal title</mdb-modal-title>
+          </mdb-modal-header>
+          <mdb-modal-body>...</mdb-modal-body>
+          <mdb-modal-footer>
+            <mdb-btn color="secondary" @click.native="showAddTopic = false">Close</mdb-btn>
+            <mdb-btn color="primary">Save changes</mdb-btn>
+          </mdb-modal-footer>
+        </mdb-modal>
+  
       </mdb-list-group>
+
     </div>
     <!-- /Sidebar  -->
     <main>
@@ -115,12 +120,17 @@ import {
   mdbNavItem,
   mdbNavbarNav,
   mdbNavbarToggler,
- 
+  mdbBtn,
   mdbIcon,
   mdbListGroup,
   mdbListGroupItem,
   mdbFooter,
-  waves
+  waves,
+  mdbModal,
+  mdbModalHeader,
+  mdbModalTitle,
+  mdbModalBody,
+  mdbModalFooter
 } from "mdbvue";
 
 export default {
@@ -131,15 +141,21 @@ export default {
     mdbNavItem,
     mdbNavbarNav,
     mdbNavbarToggler,
-    
+    mdbBtn,
     mdbListGroup,
     mdbListGroupItem,
     mdbIcon,
+    mdbModal,
+  mdbModalHeader,
+  mdbModalTitle,
+  mdbModalBody,
+  mdbModalFooter,
     ftr: mdbFooter
   },
   data() {
     return {
-      activeItem: 1
+      activeItem: 1,
+      showAddTopic: false
     };
   },
   beforeMount() {
