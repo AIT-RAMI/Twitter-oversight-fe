@@ -33,7 +33,7 @@
               <div class="data">
                 <p>Positive Sentiments</p>
                 <h4>
-                  <strong>135</strong>
+                  <strong>463</strong>
                 </h4>
               </div>
             </div>
@@ -45,13 +45,12 @@
               <div class="data">
                 <p>Negative Sentiments</p>
                 <h4>
-                  <strong>243</strong>
+                  <strong>568</strong>
                 </h4>
               </div>
             </div>
           </mdb-card>
         </mdb-col>
-
         <!--
         <mdb-col xl="3" md="6" class="mb-r">
           <mdb-card cascade class="cascading-admin-card">
@@ -127,6 +126,28 @@
             </mdb-card-body>
           </mdb-card>
         </mdb-col>
+      </mdb-row>
+    </section>
+    <section>
+      <mdb-row class="mt-5">
+      <mdb-col md="6" class="mb-4">
+        <mdb-card class="mb-4">
+          <mdb-card-header>Sentiment Classification</mdb-card-header>
+          <mdb-card-body>
+            <div style="display: block">
+              <mdb-doughnut-chart :data="doughnutChartData" :options="doughnutChartOptions" :height="300"/>
+            </div>
+          </mdb-card-body>
+        </mdb-card>
+      </mdb-col>
+      <mdb-col md="6" class="mb-4">
+        <mdb-card class="mb-4">
+          <mdb-card-header>Word Cloud</mdb-card-header>
+          <mdb-card-body>
+            <wordcloud/>
+          </mdb-card-body>
+        </mdb-card>
+      </mdb-col>
       </mdb-row>
     </section>
     <section>
@@ -573,11 +594,13 @@
 <script>
 import LineChart from '@/components/LineChart.vue';
 import { mdbRow, mdbCol, mdbBtn, mdbCard, mdbCardBody, mdbCardHeader, mdbIcon, mdbTbl, mdbBarChart, mdbPieChart, mdbLineChart, mdbRadarChart, mdbDoughnutChart, mdbListGroup, mdbListGroupItem, mdbBadge, mdbModal, mdbModalHeader, mdbModalTitle, mdbModalBody, mdbModalFooter } from 'mdbvue'
+import wordcloud from '@/components/Wordcloud.vue'
 
 export default {
   name: 'Dashboard',
   components: {
     'line-chart': LineChart,
+    wordcloud,
     mdbRow,
     mdbCol,
     mdbBtn,
@@ -616,27 +639,6 @@ export default {
       showFluidModalLeft: false,
       showFluidModalTop: false,
       showFluidModalBottom: false,
-      lineChartData: {
-        labels: ['10 Aug', '11 Aug', '12 Aug', '13 Aug', '14 Aug', '15 Aug', '16 Aug'],
-        datasets: [
-          {
-            label: '#1',
-            data: [12, 39, 3, 50, 2, 32, 84],
-            backgroundColor: 'rgba(245, 74, 85, 0.5)',
-            borderWidth: 1
-          }, {
-            label: '#2',
-            data: [56, 24, 5, 16, 45, 24, 8],
-            backgroundColor: 'rgba(90, 173, 246, 0.5)',
-            borderWidth: 1
-          }, {
-            label: '#3',
-            data: [12, 25, 54, 3, 15, 44, 3],
-            backgroundColor: 'rgba(245, 192, 50, 0.5)',
-            borderWidth: 1
-          }
-        ]
-      },
       barChartData: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
         datasets: [
@@ -679,6 +681,25 @@ export default {
             }
           }]
         }
+      },lineChartData: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [
+          {
+            label: '#1',
+            backgroundColor: 'rgba(245, 74, 85, 0.5)',
+            data: [65, 59, 80, 81, 56, 55, 40]
+          },
+          {
+            label: '#2',
+            backgroundColor: 'rgba(90, 173, 246, 0.5)',
+            data: [12, 42, 121, 56, 24, 12, 2]
+          },
+          {
+            label: '#3',
+            backgroundColor: 'rgba(245, 192, 50, 0.5)',
+            data: [2, 123, 154, 76, 54, 23, 5]
+          }
+        ]
       },
       pieChartData: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
@@ -736,12 +757,12 @@ export default {
         maintainAspectRatio: false
       },
       doughnutChartData: {
-        labels: ['Red', 'Green', 'Yellow', 'Grey', 'Dark Grey'],
+        labels: ['Positive', 'Negative'],
         datasets: [
           {
-            data: [300, 50, 100, 40, 120],
-            backgroundColor: ['#F7464A', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'],
-            hoverBackgroundColor: ['#FF5A5E', '#5AD3D1', '#FFC870', '#A8B3C5', '#616774']
+            data: [463, 568],
+            backgroundColor: ['#27ae60', '#E46651'],
+            hoverBackgroundColor: ['#27ae60', '#E46651']
           }
         ]
       },
