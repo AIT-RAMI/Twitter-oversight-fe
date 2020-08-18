@@ -2,8 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Dashboard from '@/components/Dashboard'
 import Preferences from '@/components/Preferences'
-import Tables from '@/components/Tables'
-import Maps from '@/components/Maps'
+import About from '@/components/About'
 import BadGateway from '@/components/BadGateway'
 
 
@@ -27,16 +26,10 @@ export default new Router({
       
     },
     {
-      path: '/tables',
-      name: 'Tables',
-      props: { page: 3 },
-      component: Tables
-    },
-    {
-      path: '/maps',
-      name: 'Maps',
-      props: { page: 4 },
-      component: Maps
+      path: '/about',
+      name: 'About',
+      props: { page: 0 },
+      component: About
     },
     {
       path: '/404',
