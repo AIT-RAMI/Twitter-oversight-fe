@@ -9,9 +9,11 @@
     "start": "vue-cli-service serve --open"
   },
   "dependencies": {
+    "chart.js": "^2.9.3",
     "core-js": "^3.4.4",
     "mdbvue": "6.5.0",
     "vue": "^2.6.11",
+    "vue-chartjs": "^3.5.0",
     "vue2-google-maps": "^0.10.7"
   },
   "devDependencies": {
