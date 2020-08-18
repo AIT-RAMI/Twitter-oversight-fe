@@ -54,6 +54,11 @@
           </mdb-modal-header>
           <mdb-modal-body>
             <div class="form-group1 inline-block">
+              <label for="Textarea1">Topic Name</label>
+              <textarea class="form-control d-flex p-2" id="Textarea1" rows="1"></textarea>
+            </div>
+            <br />
+            <div class="form-group1 inline-block">
               <label for="Textarea1">Keywords</label>
               <textarea class="form-control d-flex p-2" id="Textarea1" rows="3"></textarea>
             </div>
@@ -65,8 +70,8 @@
             <br />
             <br />
             <div class="form-group1">
-              <label for="Textarea3">Countries</label>
-              <textarea class="form-control rounded-0" id="Textarea3" rows="3"></textarea>
+              <label for="Textarea3">Countries (Ex : MA FR DE EN ES TN DZ EG)</label>
+              <textarea class="form-control rounded-0" id="Textarea3" rows="2"></textarea>
             </div>
           </mdb-modal-body>
           <mdb-modal-footer>
