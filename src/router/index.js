@@ -24,6 +24,7 @@ export default new Router({
       name: 'Profile',
       props: { page: 2 },
       component: Profile
+      
     },
     {
       path: '/tables',

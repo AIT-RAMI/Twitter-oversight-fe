@@ -9,7 +9,7 @@
             <mdb-icon icon="chart-pie" class="mr-3" />Dashboard
           </mdb-nav-item>
 
-          <mdb-nav-item href="/profile" waves-fixed>
+          <mdb-nav-item href="profile" waves-fixed>
             <mdb-icon icon="table" class="mr-3" />Preferences
           </mdb-nav-item>
 
@@ -41,7 +41,7 @@
         <router-link to="/404" @click.native="activeItem = 1">
           <mdb-list-group-item :action="true" :class="activeItem === 1 && 'active'">Covid-19</mdb-list-group-item>
         </router-link>
-        <router-link to="/404" @click.native="activeItem = 2">
+        <router-link to="/" @click.native="activeItem = 2">
           <mdb-list-group-item :action="true" :class="activeItem === 2 && 'active'">ENSIAS</mdb-list-group-item>
         </router-link>
         <router-link to="/404" @click.native="activeItem = 3">
