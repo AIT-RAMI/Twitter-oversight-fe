@@ -244,11 +244,12 @@
           </mdb-col>
       </mdb-row>
     </section>
+  </section>
 </template>
 
 <script>
 import LineChart from '@/components/LineChart.vue';
-import { mdbRow, mdbCol, mdbBtn, mdbCard, mdbCardBody, mdbCardHeader, mdbIcon, mdbTbl, mdbLineChart, mdbRadarChart, mdbDoughnutChart, mdbModal, mdbModalHeader, mdbModalTitle, mdbModalBody, mdbModalFooter } from 'mdbvue'
+import { mdbRow, mdbCol, mdbBtn, mdbCard, mdbCardBody, mdbCardHeader, mdbTbl, mdbDoughnutChart } from 'mdbvue'
 import wordcloud from '@/components/Wordcloud.vue'
 
 export default {
@@ -262,16 +263,8 @@ export default {
     mdbCard,
     mdbCardBody,
     mdbCardHeader,
-    mdbIcon,
     mdbTbl,
-    mdbLineChart,
-    mdbRadarChart,
     mdbDoughnutChart,
-    mdbModal,
-    mdbModalHeader,
-    mdbModalTitle,
-    mdbModalBody,
-    mdbModalFooter
   },
   data () {
     return {
