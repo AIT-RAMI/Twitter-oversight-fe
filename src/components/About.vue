@@ -1,9 +1,10 @@
 <template>
-  <section id="bad-gateway">
+  <section id="about">
     <div class="full">
       <img alt="logo" class="img-fluid logo" src="../assets/logo-to.png"/>
       <h1 class="h1-responsive mt-3 mb-2">About Us</h1>
-      <h4>ABOUUUUTT</h4>
+      <br>
+      <p style="font-size:120%">At TwitterOversight, we believe there is a better way to saty in touch with what's happening now in the topics that interests you. We're obsessively passionate about it, and our mission is to help you achieve it by providing top tweets in those topics and analyzing their sentiments.</p>
     </div>
   </section>
 </template>
@@ -27,11 +28,8 @@ export default {
 <style scoped>
 .logo {
   width:auto; 
-  padding-left:220px; 
-  padding-right:220px;
-}
-h2 {
-  padding-bottom: 15px;
+  padding-left:30%; 
+  padding-right:30%;
 }
 .full {
   height: 70vh;
