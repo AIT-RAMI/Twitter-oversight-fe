@@ -5,18 +5,24 @@
       <mdb-navbar-brand href="https://mdbootstrap.com/docs/vue/" target="_blank">Twitter Oversight</mdb-navbar-brand>
       <mdb-navbar-toggler>
         <mdb-navbar-nav left>
+          <router-link to="/dashboard">
           <mdb-nav-item to="/dashboard" waves-fixed>
             <mdb-icon icon="chart-pie" class="mr-3" />Dashboard
           </mdb-nav-item>
+          </router-link>
 
-          <mdb-nav-item href="preferences" waves-fixed>
-            <mdb-icon icon="table" class="mr-3" />Preferences
-          </mdb-nav-item>
+          <router-link to="/preferences">
+            <mdb-nav-item href="/preferences" waves-fixed>
+              <mdb-icon icon="table" class="mr-3" />Preferences
+            </mdb-nav-item>
+          </router-link>
 
-          <mdb-nav-item href="about" waves-fixed>
-            <mdb-icon icon="map" class="mr-3" />About Us
-          </mdb-nav-item>
-        </mdb-navbar-nav>
+          <router-link to="/about">
+            <mdb-nav-item href="/about" waves-fixed>
+              <mdb-icon icon="map" class="mr-3" />About Us
+            </mdb-nav-item>
+          </router-link>
+          </mdb-navbar-nav>
 
         <mdb-navbar-nav right>
           <mdb-nav-item href="https://github.com/AIT-RAMI/Twitter-oversight" waves-fixed>
@@ -28,7 +34,7 @@
     <!--/.Navbar-->
     <!-- Sidebar -->
     <div class="sidebar-fixed position-fixed">
-      <a class="logo-wrapper">
+      <a class="logo-wrapper" href="/">
         <img alt class="img-fluid" src="./assets/logo-to.png" />
       </a>
       <mdb-list-group class="list-group-flush">
